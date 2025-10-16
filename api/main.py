@@ -75,3 +75,11 @@ async def actualizar_juego(gameid: str, juego: Videojuego):
 async def listar_por_genero(genero: str):
     juegos = await db["juegos"].find({"genero": genero}).to_list(1000)
     return juegos
+
+#Endpoint para editar solo el título de un juego por su 'gameid'
+@app.patch("/juegos/{gameid}/titulo", response_description="Actualizar título de un juego", response_model=Videojuego)
+async def actualizar_titulo(gameid: str, titulo: str):
+    result = await db["juegos"].update_one({"gameid": gameid}, {"$set": {"titulo": titulo}})
+    if result.modified_count == 1:
+        juego = await db["juegos"].find_one({"gameid": gameid})
+        return juego
