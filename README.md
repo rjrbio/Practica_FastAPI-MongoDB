@@ -1,4 +1,17 @@
 # Practica FastAPI + MongoDB
+##### Para virtualizar con docker:
+```docker
+  - Localizar el directorio donde se encuentra el programa
+  - Levantar el contenedor:
+      docker-compose up
+ # Para usar MongoDB desde consola:
+  - En nueva terminal, comprobar el nombre del contenedor:
+      docker ps
+  - Ejecutar el programa:
+      docker exec -it nombre-del-contenedor bash
+  - Entrar en MongoDB:
+      mongosh -username nombre-de-usuario
+```
 ## Práctica dockerizada FastAPI con MongoDB (probando EndPoints)
 En esta práctica usamos **Docker** para virtualizar la api FastAPI y el gestor de base de datos MongoDB con la finalidad de aprender el uso de los EndPoints.
 
