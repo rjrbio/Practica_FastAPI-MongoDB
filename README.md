@@ -51,3 +51,14 @@ O *Actualizar juego*
 Exactamente igual que lo haría mediante comandos en consola:
 
 ![bdd3](https://github.com/user-attachments/assets/54d3aef7-3fb4-4ae3-8b63-49f78fa3d9ec)
+
+##### EndPoints añadidos
+He añadido un par de Endpoints para practicar, como un
+
+*Listado de juegos según género*
+
+![listargenero](https://github.com/user-attachments/assets/5cde9a1b-bc81-47e5-839b-fe08fc70a7e3)
+
+Y  **Patch** *para actualizar únicamente un campo (en este caso, el título) de un juego:*
+
+![patchjuego](https://github.com/user-attachments/assets/82879690-d77f-4a41-ae88-ffca41d8546f)
