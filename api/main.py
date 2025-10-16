@@ -69,3 +69,9 @@ async def actualizar_juego(gameid: str, juego: Videojuego):
         return await listar_juegos()
     else:
         raise HTTPException(status_code=404, detail=f"Juego con 'gameid' {gameid} no encontrado")
+
+#Endpoint para listar juegos por género
+@app.get("/juegos/genero/{genero}", response_description="Lista de juegos por género", response_model=List[Videojuego])
+async def listar_por_genero(genero: str):
+    juegos = await db["juegos"].find({"genero": genero}).to_list(1000)
+    return juegos
